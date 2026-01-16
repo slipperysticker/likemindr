@@ -31,23 +31,9 @@ export default function SignupPage() {
 
         <form className="space-y-4">
           <Input
-            label="Username"
-            type="text"
-            placeholder="bookworm123"
-            required
-          />
-
-          <Input
-            label="Email"
-            type="email"
-            placeholder="you@example.com"
-            required
-          />
-
-          <Input
-            label="Password"
-            type="password"
-            placeholder="••••••••"
+            label="Phone Number"
+            type="tel"
+            placeholder="+1 (555) 123-4567"
             required
           />
 

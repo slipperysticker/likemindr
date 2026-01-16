@@ -56,12 +56,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         whileHover={!disabled ? { scale: 1.02 } : {}}
         whileTap={!disabled ? { scale: 0.98 } : {}}
       >
-        {withSparkle && (
-          <span className="absolute -top-1 -right-1 text-kawaii-yellow animate-[sparkle_1.5s_ease-in-out_infinite]">
-            ✨
-          </span>
-        )}
-        {children}
+        <span className="flex items-center justify-center gap-2">
+          {children}
+          {withSparkle && (
+            <span className="text-kawaii-yellow animate-[sparkle_1.5s_ease-in-out_infinite]">
+              ✨
+            </span>
+          )}
+        </span>
       </motion.button>
     );
   }

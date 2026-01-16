@@ -21,11 +21,11 @@ export function Card({
 
   const variantStyles = {
     default:
-      'bg-white shadow-[0_4px_15px_rgba(224,176,255,0.3)]',
+      'bg-white dark:bg-background-secondary shadow-[0_4px_15px_rgba(224,176,255,0.3)]',
     gradient:
-      'bg-gradient-to-br from-kawaii-lavender/30 via-white to-kawaii-pink/20 shadow-[0_4px_15px_rgba(224,176,255,0.3)]',
+      'bg-white dark:bg-background-secondary shadow-[0_4px_15px_rgba(224,176,255,0.3)] dark:shadow-[0_4px_15px_rgba(139,124,255,0.6)]',
     outlined:
-      'bg-white border-2 border-kawaii-lavender',
+      'bg-white dark:bg-background-secondary border-2 border-kawaii-lavender dark:border-kawaii-purple/40',
   };
 
   const hoverStyles = hoverable

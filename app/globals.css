@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -11,11 +10,11 @@
   --kawaii-lavender: #C7D0E8; /* Soft blue-grey */
 
   /* Light mode colors */
-  --background: #FFFFFF;
-  --background-secondary: #F8F9FA;
-  --text-primary: #2D3748;
-  --text-secondary: #718096;
-  --text-muted: #A0AEC0;
+  --background: #F5F5DC;
+  --background-secondary: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #2D3748;
+  --text-muted: #4A5568;
 
   /* Interactive colors */
   --primary: var(--kawaii-purple);
@@ -67,8 +66,8 @@
   --color-accent: var(--accent);
 
   /* Fonts */
-  --font-sans: 'Quicksand', var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono);
+  --font-sans: Georgia, 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
 
   /* Border Radius - Kawaii rounded corners */
   --radius-kawaii: 1.5rem;
@@ -111,7 +110,7 @@
 body {
   background: var(--background);
   color: var(--text-primary);
-  font-family: 'Quicksand', ui-sans-serif, system-ui, sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -144,4 +143,29 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--kawaii-purple);
+}
+
+/* Force dark text in feature cards for light mode */
+:not(.dark) .feature-cards h3,
+:not(.dark) .feature-cards p {
+  color: #000000 !important;
+}
+
+/* Dark mode text colors for feature cards */
+.dark .feature-cards h3 {
+  color: #F1F5F9 !important;
+}
+
+.dark .feature-cards p {
+  color: #E2E8F0 !important;
+}
+
+/* Force dark text in quote bubble for light mode */
+:not(.dark) .quote-bubble p {
+  color: #000000 !important;
+}
+
+/* Dark mode text color for quote bubble */
+.dark .quote-bubble p {
+  color: #F1F5F9 !important;
 }

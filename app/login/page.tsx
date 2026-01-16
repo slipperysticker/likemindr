@@ -31,28 +31,11 @@ export default function LoginPage() {
 
         <form className="space-y-4">
           <Input
-            label="Email"
-            type="email"
-            placeholder="you@example.com"
+            label="Phone Number"
+            type="tel"
+            placeholder="+1 (555) 123-4567"
             required
           />
-
-          <Input
-            label="Password"
-            type="password"
-            placeholder="••••••••"
-            required
-          />
-
-          <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center text-text-secondary">
-              <input type="checkbox" className="mr-2 rounded" />
-              Remember me
-            </label>
-            <a href="#" className="text-kawaii-purple hover:underline">
-              Forgot password?
-            </a>
-          </div>
 
           <Button type="submit" variant="primary" size="lg" fullWidth>
             Sign In

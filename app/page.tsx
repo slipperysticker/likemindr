@@ -6,94 +6,80 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-kawaii-lavender/30 via-background to-kawaii-purple/10">
+    <div className="min-h-screen bg-background dark:bg-gradient-to-br dark:from-kawaii-lavender/30 dark:via-background dark:to-kawaii-purple/10">
       <ThemeToggle />
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-16 md:py-24">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Logo/Title */}
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-7xl font-bold text-text-primary mb-4">
+          <div className="mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-text-primary mb-4">
               Likemindr
             </h1>
-            <div className="h-1 w-32 bg-gradient-to-r from-kawaii-purple via-kawaii-pink to-kawaii-mint rounded-full mx-auto"></div>
           </div>
 
           {/* Mascot */}
-          <div className="mb-8">
+          <div className="mb-6">
             <Mascot
-              emotion="excited"
-              message="Find your reading soulmates!"
-              size="lg"
+              emotion="happy"
+              size="md"
             />
           </div>
 
           {/* Tagline */}
-          <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-6">
-            Connect with readers who are reading
-            <span className="text-kawaii-purple"> the same book</span> as you,
-            <span className="text-kawaii-mint"> right now</span>
+          <h2 className="text-2xl md:text-3xl font-semibold text-text-primary mb-10">
+            <span className="text-kawaii-purple">Same book.</span>{' '}
+            <span className="text-kawaii-mint">New friends.</span>
           </h2>
 
-          <p className="text-xl text-text-secondary mb-12 max-w-2xl">
-            Not another book tracker. Likemindr instantly matches you with real
-            humans reading what you're reading, so you can chat, share, and bond
-            over your favorite stories together.
-          </p>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Link href="/signup">
-              <Button size="lg" variant="primary" withSparkle>
-                Get Started Free
+              <Button size="md" variant="primary" withSparkle>
+                Get Started
               </Button>
             </Link>
             <Link href="/login">
-              <Button size="lg" variant="ghost">
+              <Button size="md" variant="ghost" className="border-2 border-kawaii-purple rounded-full">
                 Sign In
               </Button>
             </Link>
           </div>
 
           {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-12">
+          <div className="feature-cards grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-10">
             <Card variant="gradient">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold mb-2 text-text-primary">
+              <div className="text-4xl mb-3">🤝</div>
+              <h3 className="text-xl font-bold mb-2">
                 Instant Matching
               </h3>
-              <p className="text-text-secondary">
-                Add your book and instantly see who's reading it with you
+              <p className="text-sm leading-relaxed font-medium">
+                See who's reading your book right now
               </p>
             </Card>
 
             <Card variant="gradient">
-              <div className="text-5xl mb-4">💬</div>
-              <h3 className="text-xl font-semibold mb-2 text-text-primary">
+              <div className="text-4xl mb-3">💬</div>
+              <h3 className="text-xl font-bold mb-2">
                 Spoiler-Free Chat
               </h3>
-              <p className="text-text-secondary">
-                Discuss safely with readers at the same point in the story
+              <p className="text-sm leading-relaxed font-medium">
+                Chat safely with readers at your point in the story
               </p>
             </Card>
 
             <Card variant="gradient">
-              <div className="text-5xl mb-4">✨</div>
-              <h3 className="text-xl font-semibold mb-2 text-text-primary">
+              <div className="text-4xl mb-3">✨</div>
+              <h3 className="text-xl font-bold mb-2">
                 AI-Powered
               </h3>
-              <p className="text-text-secondary">
-                Get smart suggestions and conversation starters
+              <p className="text-sm leading-relaxed font-medium">
+                Smart suggestions and conversation starters
               </p>
             </Card>
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="py-8 text-center text-text-secondary">
-        <p>Made with 💜 for book lovers everywhere</p>
-      </footer>
     </div>
   );
 }
